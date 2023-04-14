@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Script - Day 2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <label>I would like to eat </label>
+      <select onchange="chooseLunch(this)">
+        <option>Tacos</option>
+        <option>Pasta</option>
+        <option>Sushi</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Insert your name: </label>
+      <input type="text" oninput="setName(this)" />
+    </div>
+    <h3></h3>
+
+    <div>
+      <button id="khalid" onclick="khalidFunction()">Khalid Function</button>
+    </div>
+    <div>
+      <button onclick="changeOthers()">Color Changer</button>
+      <button onclick="changeSize()">Size Changer</button>
+      <button onclick="imageChanger()">Image Changer</button>
+    </div>
+
+    <img src="monkey.jpg" alt="pets photo" onclick="hideMonkey(this)" />
+
+    <div class="block" onmouseover="over(this)" onmouseout="out(this)"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

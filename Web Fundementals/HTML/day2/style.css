@@ -1,0 +1,26 @@
+
+.container{
+    border: 5px solid rebeccapurple;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center;
+
+}
+.box-1{
+    border: inherit;
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .box-2{
+    border: inherit;
+    width: 100px;
+    height: 100px;
+
+  }
+

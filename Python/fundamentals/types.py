@@ -15,7 +15,7 @@ fruit.insert(0,"Saad")
 fruit.sort()
 
 print(len(seasons))
-x = seasons.count("Winter")
+x = seasons.count("Winter")/
 print(x)
 
 

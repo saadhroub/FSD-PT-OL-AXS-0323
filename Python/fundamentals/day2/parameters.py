@@ -8,6 +8,8 @@ def average(math=55,english=55, arabic=55):
     print(f"Arabic Grade = {arabic}")
     return avg
 
+lambda math,english, arabic: (math+english+arabic)/3
+
 # montaser_avg = average(95,99)
 # print(f'Montaser average  = {montaser_avg}')
 

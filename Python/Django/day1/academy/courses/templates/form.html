@@ -11,10 +11,12 @@
 </head>
 <body>
     <h1>Registration</h1>
-    <h2>Welcome {{class}}, you are in {{academy}}</h2>
+   
+    
     <form action="/process" method="post" >
         {% csrf_token %}
         <input type="text" name="name" >
+        <input type="hidden" name="item" value="100" >
         <input type="email" name="email" >
         <input type="password" name="password" >
         <input type="submit" >

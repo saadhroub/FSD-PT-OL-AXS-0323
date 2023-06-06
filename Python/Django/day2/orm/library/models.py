@@ -15,5 +15,9 @@ new_book = Book(title="Back to Haifa",description="Novel of Palestinian Revoluti
 new_book.save()
 
 
-all_books = Book.objects.all()
-print(all_books)
+Book.objects.create(title="Lord of the Ring",description="Imaginary book",release_date="2004-01-21")
+Book.objects.create(title="Animal Farm",description="English Novel",release_date="1999-01-21")
+
+
+# all_books = Book.objects.all()
+# print(all_books)

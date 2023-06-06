@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 
 
@@ -9,3 +9,9 @@ def index(request):
     	"all_books": Book.objects.all()
     }
     return render(request, "index.html", context)
+
+
+
+def create(request):
+    Book.objects.create(title=request.POST['title'] )
+    return redirect('/')

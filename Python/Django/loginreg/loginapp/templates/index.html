@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+
+    <title>Login and Registration</title>
+</head>
+<body>
+    <div class="loginreg">
+        <div class="form1">
+            <form method="POST" action="/register">
+                {% csrf_token %}
+                <table>
+                    <tr><td>First Name:</td><td><input type="text" name="fname"></td></tr>
+                    <tr><td>Last Name:</td><td><input type="text" name="lname"></td></tr>
+                    <tr><td>Email: </td><td><input type="text" name="email"></td></tr>
+                    <tr><td>Password:</td><td><input type="password" name="password"></td></tr>
+                    <tr><td>Confirm PWD:</td><td><input type="password" name="pwdconfirm"></td></tr>
+                    <tr><td><input type="submit" value="Register"></td></tr>
+                </table>
+            </form>
+        </div>
+        <div class="form2">
+            <form method="POST" action="/login">
+                {% csrf_token %}
+                <table>
+                    <tr><td>Email: </td><td><input type="text" name="email2"></td></tr>
+                    <tr><td>Password:</td><td><input type="password" name="password2"></td></tr>
+                </table>
+                    <input type="submit" value="Login">
+            </form>
+        </div>
+
+    </div>
+    <div class="errors">
+        {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+            {% endfor %}
+        </ul>
+        {% endif %}
+        </div>
+</body>
+</html>

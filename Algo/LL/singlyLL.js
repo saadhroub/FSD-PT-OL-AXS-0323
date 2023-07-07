@@ -50,6 +50,16 @@ class SinglyLL{
         current = null;
 
     }
+
+    sum(){
+        let sum=0;
+        let current = this.head;
+        while(current!=null){
+            sum+=current.data;
+            current = current.next;
+        }
+        return sum;
+    }
 }
 
   var myList = new SinglyLL();
@@ -57,22 +67,8 @@ class SinglyLL{
   myList.addFront(20);
   myList.addFront(30);
   myList.addEnd(100);
-  myList.addEnd([1,2,3,4,5,6,7,8]);
-
-  myList.delete(20)
-  myList.delete(100)
-  myList.delete(10)
-  myList.print()
+  myList.addEnd(5);
+  myList.print();
+  console.log(myList.sum());
 
 
-
-
-    // findSum() {
-    //     let runner=this.head;
-    //     let sum=0;
-    //     while(runner !== null){
-    //         sum+=runner.data
-    //         runner=runner.next
-    //     }
-    //     return sum
-    // }
